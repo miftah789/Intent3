@@ -19,12 +19,19 @@ public class MainActivity extends AppCompatActivity {
                 dialPhoneNumber("0341712500");
             }
         });
-        findViewById(R.id.imageViewsms).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageViewbrouser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                composeSmsMessage("Pesan dari SMK Telkom Malng");
+                openWebPage("http://www.smktelokm-mlg.sch.id/");
             }
         });
+    }
+
+    private void openWebPage(String url) {
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getPackageManager()) != null)
+            startActivity(intent);
     }
 
     private void composeSmsMessage(String message) {
