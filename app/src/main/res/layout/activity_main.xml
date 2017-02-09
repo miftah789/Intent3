@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/ic_language_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageViewsmsphoto"
+        android:id="@+id/imageViewphoto"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_weight="1"
